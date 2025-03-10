@@ -11,7 +11,7 @@ import archetypes
 import main
 import stor
 
-goblin=enemy_creation.Enemy("goblin",30,20,20,20)
+goblin=enemy_creation.Enemy("goblin",40,15,20,50)
 if opening_scene.store=="Open it" and opening_scene.store_2=="Yes, it's Questin' Time!!!":
     print(art_archive.forest())
     print("You reach the entrance of the DARK EVIL FOREST.")
