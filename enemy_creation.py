@@ -1,3 +1,4 @@
+# Ben
 class Enemy:
     # This method will initialize the attributes of the object
     def __init__(self, name: str, hp: int, strength: int, dex: int, agl: int):
