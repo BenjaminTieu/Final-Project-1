@@ -24,7 +24,7 @@ if store=="Open it":
         print("You grab your old gear and set off to the capital of Polylandia, Mustang Village")
     else:
         print("You decide that going on a quest is too much work")
-        print("You tell yourself, \"Why even quest when there are more interesting things to do?\"...")
+        print("You tell yourself, \"Why even quest when there are more interesting things to do...\"")
         print("like watching paint dry!")
 
 else:
