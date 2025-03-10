@@ -1,4 +1,4 @@
-#Lukas
+# Lukas
 import random
 import time
 import func
