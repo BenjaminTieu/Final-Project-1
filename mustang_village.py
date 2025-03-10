@@ -10,9 +10,9 @@ import archetypes
 import main
 import forest_scene
 import stor
-#Lukas
+
 main.character1.set_health(opening_scene.starting_health)
-cpt_arm=enemy_creation.Enemy("Captain Armstrong",20,15,50,50)
+cpt_arm=enemy_creation.Enemy("Captain Armstrong",20,15,50,80)
 if forest_scene.store_3=="Go through the DARK EVIL FOREST":
     print("After a fortnight, you reach Mustang Village.")
     print("The ghost town you see before you was a FAR CRY from the Vibrant bustling village of your youth.")
@@ -20,7 +20,7 @@ if forest_scene.store_3=="Go through the DARK EVIL FOREST":
     print("You suspect DARK LORD JOE MAMA and the princess are up in that castle")
     func.prompt1()
     print("An old man approaches you from one of the empty houses")
-    time.sleep(1)
+    time.sleep(0.5)
     store_7=func.user_input("Hello traveller have you come to save the kingdom and the princess from the dark lord JOE MAMA?", stor.mustang_village_l1)
     if store_7=="Yes, I am here to depose the tyrant":
         print("Then I must warn you, traveler. DARK LORD JOE MAMA has sent one of his allies, CAPTAIN ARMSTRONG, into town.")
@@ -71,7 +71,7 @@ if forest_scene.store_3=="Go through the DARK EVIL FOREST":
             time.sleep(1)
             print("the cat lunges at you and mauls your face")
             print("you barely manage to pull it away from your newly mauled face when the cat says")
-            print("\"Fool! You have fallen for my ruse. It was me, CAPTAIN ARMSTRONG all along!\"")
+            print("Fool! You have fallen for my ruse. It is me, CAPTAIN ARMSTRONG all along!")
             print("I will rip you apart and deliver your head to JOE MAMA")
             print("And i shall turn your desecrated body into CAT NIP!!!!!")
             health_ambush = int((main.character1.get_health()) / 4)
@@ -110,7 +110,7 @@ if forest_scene.store_3=="Go through the DARK EVIL FOREST":
             store_11=func.user_input("Which should you take?",stor.mustang_village_l5)
             store_11 = func.confirm(store_11, "Are you sure you want to choose the [{}]?",
                                    "What should you get?", stor.mustang_village_l5, stor.mustang_village_dict2)
-            if store_11=="The HEAVY ARMOR (+40 Health,+25 strength,-25 Agility)":
+            if store_11=="HEAVY ARMOR":
                 main.character1.set_health(updated_health)
                 health_up=main.character1.get_health()+50
                 main.character1.set_health(health_up)
