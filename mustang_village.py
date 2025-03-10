@@ -10,7 +10,7 @@ import archetypes
 import main
 import forest_scene
 import stor
-
+#Lukas
 main.character1.set_health(opening_scene.starting_health)
 cpt_arm=enemy_creation.Enemy("Captain Armstrong",20,15,50,50)
 if forest_scene.store_3=="Go through the DARK EVIL FOREST":
@@ -107,7 +107,9 @@ if forest_scene.store_3=="Go through the DARK EVIL FOREST":
             print("The innkeeper walks over to you.")
             print("Thank you for saving my establishment from that fiend. He had kept murdering all of my customers.")
             print("Please, choose one of these as a reward.")
-            store_11=func.user_input("Which should you take?",["The HEAVY ARMOR (+40 Health,+25 strength,-25 Agility)","The Light Armor (+10 Health, +20 Agility,"])
+            store_11=func.user_input("Which should you take?",stor.mustang_village_l5)
+            store_11 = func.confirm(store_11, "Are you sure you want to choose the [{}]?",
+                                   "What should you get?", stor.mustang_village_l5, stor.mustang_village_dict2)
             if store_11=="The HEAVY ARMOR (+40 Health,+25 strength,-25 Agility)":
                 main.character1.set_health(updated_health)
                 health_up=main.character1.get_health()+50
