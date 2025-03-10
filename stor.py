@@ -1,4 +1,4 @@
-# Ben
+# Ben and Lukas
 # Note that each dictionary should generally be created in such a way that:
 #   The first key of the embedded dictionary corresponds to the name of the
 #       indicated entity.
@@ -10,7 +10,6 @@
 #   Any key of the embedded list beyond the first two correspond to the
 #       attributes associated with the entity (if not already used)
 
-# This list stores a verification phrase with "yes" and "no" options
 phr_verification = ["Yes", "No"]
 
 # This list stores the names of all the archetypes
@@ -19,10 +18,10 @@ archetype_names = ["Warrior", "Thief"]
 # This dictionary stores the attributes of all the archetypes
 archetype_dict = {"Warrior": {"Archetype": "Warrior",
                       "Description": "A brawler archetype with a focus on getting up-close and personal",
-                      "Health": 1000, "Strength": 200, "Dexterity": 10, "Agility": 10},
+                      "Health": 100, "Strength": 25, "Dexterity": 20, "Agility": 20},
                   "Thief": {"Archetype": "Thief",
                       "Description": "A sneaky and nimble class that runs circles around its enemies",
-                      "Health": 50, "Strength": 10, "Dexterity": 20, "Agility": 20}}
+                      "Health": 75, "Strength": 18, "Dexterity": 30, "Agility":45}}
 
 # These lists are all the lists that will be used in opening_scene
 opening_scene_l1 = ["Open it","Throw it away"]
