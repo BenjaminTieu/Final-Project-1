@@ -94,39 +94,37 @@ def combat_loop(character,enemy):#A combat loop between the enemy and character.
                     time.sleep(1)
                     print("{} has {} health left".format(character.get_name(),character_hp_after_attack))
 
-
-
-
         if store=='Run':#If player chooses to 'run'
             if run(character)==0:#successful run away
                 enemy.set_health(-10000)#sets enemy health to a large value below zero which the player can never reach, this is to end the loop
                 print("{} ran away from the {}".format(character.get_name(),enemy.get_name()))
             elif run(character)==1:#If player fails to run away
-                print("{} failed to run away".format(character.get_name()))#Failed to Run Away
-                print(art_archive.trip())#ascii art recieved from the art archive
+                print(art_archive.trip())#ascii art received from the art archive
+                print("{} failed to run away".format(character.get_name()))  # Failed to Run Away
                 character_hp_after_attack = hit_victim(character, enemy)# player health after attack by enemy, no chance to dodge
-                print("{} attacked {},{} has".format(enemy.get_name(), character.get_name(), character.get_name()),
-                      character_hp_after_attack)
+                print("{} attacked {}, {} has {} health left".format(enemy.get_name(), character.get_name(), character.get_name(),
+                      character_hp_after_attack))
 
-        if character.get_health()<=0:# Death screens, randomized , will happen when the players health is less than or equal to 0!
-            character.set_health(0)
-            num=random_int_generator()#random number generator from 1 to 4
-            if num==1:
-                print("The {} obliterated {} skull".format(enemy.get_name(),character.get_name()))
-                print(art_archive.player_death_img())
-            if num == 2:
-                print("The {} ate {} alive".format(enemy.get_name(),character.get_name()))
-                print(art_archive.player_death_img())
-            if num == 3:
-                print("Your spine was snapped in half by the {}".format(enemy.get_name()))
-                print(art_archive.player_death_img())
-            if num == 4:
-                print("{} isn't getting up...".format(character.get_name()))
-                print(art_archive.player_death_img())
-            sys.exit()
-        if enemy.get_health()<=0:#If enemy health less than 0 returns this message
-            enemy.set_health(0)
-            print("{} defeated the {}".format(character.get_name(),enemy.get_name()))
+    if character.get_health()<=0:# Death screens, randomized , will happen when the players health is less than or equal to 0!
+        character.set_health(0)
+        num=random_int_generator()#random number generator from 1 to 4
+        if num==1:
+            print("The {} obliterated {} skull".format(enemy.get_name(),character.get_name()))
+            print(art_archive.player_death_img())
+        if num == 2:
+            print("The {} ate {} alive".format(enemy.get_name(),character.get_name()))
+            print(art_archive.player_death_img())
+        if num == 3:
+            print("Your spine was snapped in half by the {}".format(enemy.get_name()))
+            print(art_archive.player_death_img())
+        if num == 4:
+            print("{} isn't getting up...".format(character.get_name()))
+            print(art_archive.player_death_img())
+        sys.exit()
+
+    if enemy.get_health()<=0 and enemy.get_health()!=-10000:#If enemy health less than 0 returns this message
+        enemy.set_health(0)
+        print("{} defeated the {}".format(character.get_name(),enemy.get_name()))
 
 
 
